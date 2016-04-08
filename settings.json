@@ -1,0 +1,29 @@
+{
+  "Settings": {
+    "Application": {
+      "lang": "fr_CA",
+      "degree": "celsius",
+      "Menu": {
+        "Weather": "weatherinfo",
+        "Alarms": "alamsinfo",
+        "Radio": "radioinfo",
+        "Automation": "domotiqueinfo",
+        "Configuration": "configuration"
+      }
+    },
+    "Weather": {
+      "apiKey": "",
+      "cityName": "",
+      "country": ""
+    },
+    "Alarms": {
+      "test": "test"
+    },
+    "Radio": {
+      "test": "test"
+    },
+    "Automation": {
+      "test": "test"
+    }
+  }
+}

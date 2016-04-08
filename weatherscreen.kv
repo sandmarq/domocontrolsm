@@ -1,0 +1,176 @@
+    name: 'weatherinfo'
+
+    GridLayout:
+        rows: 3
+        cols: 2
+        spacing: 15
+        padding: 15
+        #cols_default_height: 100
+
+        GridLayout:
+            rows: 2
+            Label:
+                text: "En ce monent"
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    cols: 1
+                    rows: 1
+                    Image:
+                        source: 'img/meteocons-icons/meteocons-icons/SVG/10d.png'
+                        allow_stretch: True
+                        keep_ratio: True
+                        size: self.texture_size
+                        size_hint: 0.2, 0.2
+                GridLayout:
+                    cols: 1
+                    rows: 5
+                    Label:
+                        text: "Info1"
+                    Label:
+                    Label:
+                        text: "Info2"
+                    Label:
+                    Label:
+                        text: "Info3"
+
+        GridLayout:
+            rows: 2
+            Label:
+                text: "Aujourd'hui"
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    cols: 1
+                    rows: 1
+                    Image:
+                        source: 'img/meteocons-icons/meteocons-icons/SVG/10d.png'
+                        allow_stretch: True
+                        keep_ratio: True
+                        size: self.texture_size
+                        size_hint: 0.2, 0.2
+                GridLayout:
+                    cols: 1
+                    rows: 5
+                    Label:
+                        text: "Info1"
+                    Label:
+                        text: "Info2"
+                    Label:
+                        text: "Info3"
+                    Label:
+                        text: "Info4"
+                    Label:
+                        text: "Info5"
+
+        GridLayout:
+            rows: 2
+            Label:
+                text: "Demain"
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    cols: 1
+                    rows: 1
+                    Image:
+                        source: 'img/meteocons-icons/meteocons-icons/SVG/10d.png'
+                        allow_stretch: True
+                        keep_ratio: True
+                        #size: self.texture_size
+                        #size_hint: 0.5, 0.5
+                GridLayout:
+                    cols: 1
+                    rows: 5
+                    Label:
+                        text: "Info1"
+                    Label:
+                        text: "Info2"
+                    Label:
+                        text: "Info3"
+                    Label:
+                        text: "Info4"
+                    Label:
+                        text: "Info5"
+
+        GridLayout:
+            rows: 2
+            Label:
+                text: "Après Demain"
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    cols: 1
+                    rows: 1
+                    Image:
+                        source: 'img/meteocons-icons/meteocons-icons/SVG/10d.png'
+                        allow_stretch: True
+                        keep_ratio: True
+                        size: self.texture_size
+                        size_hint: 0.2, 0.2
+                GridLayout:
+                    cols: 1
+                    rows: 5
+                    Label:
+                        text: "Info1"
+                    Label:
+                        text: "Info2"
+                    Label:
+                        text: "Info3"
+                    Label:
+                        text: "Info4"
+                    Label:
+                        text: "Info5"
+
+        GridLayout:
+            rows: 2
+            Label:
+                text: "Après Après Demain"
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    cols: 1
+                    rows: 1
+                    Image:
+                        source: 'img/meteocons-icons/meteocons-icons/SVG/10d.png'
+                        allow_stretch: True
+                        keep_ratio: True
+                        size: self.texture_size
+                        size_hint: 0.2, 0.2
+                GridLayout:
+                    cols: 1
+                    rows: 5
+                    Label:
+                        text: "Info1"
+                    Label:
+                        text: "Info2"
+                    Label:
+                        text: "Info3"
+                    Label:
+                        text: "Info4"
+                    Label:
+                        text: "Info5"
+        GridLayout:
+            rows: 5
+            cols: 2
+            Label:
+            Label:
+            Label:
+            Label:
+            Label:
+            Button:
+                text: "Back"
+                on_release:
+                    root.manager.transition.direction = 'right'
+                    app.root.current = 'main'
+
+<AlarmsScreen>:
+    GridLayout:
+        rows: 6
+        spacing: 30
+        padding: 30
+        cols_default_height: 100
+        Button:
+            text: "Back"
+            on_release:
+                root.manager.transition.direction = 'right'
+                app.root.current = 'main'
