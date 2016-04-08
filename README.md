@@ -10,3 +10,5 @@ modify configuration file.
 
 Give it your Openweather map API key
 adjust your location and other setting.
+
+install kivy by using the install_kivy.sh script
