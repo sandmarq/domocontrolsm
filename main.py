@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-
+This is a test
 """
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
