@@ -10,6 +10,11 @@ import kivyviews
 import threading
 from flask import Flask
 
+# TODO Socket server
+
+# TODO Data handler
+
+# review check this code
 # Server Flask
 serverweb = Flask(__name__)
 
@@ -17,12 +22,11 @@ serverweb = Flask(__name__)
 @serverweb.route("/")
 def hello():
     return "DomoControlSM"
+
 # Create the server web and run it in a background daemon thread.
-server_thread = threading.Thread(target=serverweb.run)
+server_thread = threading.Thread(target=serverweb.run, kwargs=dict(host='0.0.0.0'))
 server_thread.daemon = True
 server_thread.start()
-
-# TO DO Socket
 
 
 # Declare screens classes
