@@ -7,7 +7,18 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 
 import kivyviews
+import threading
+from flask import Flask
 
+#Server Flask
+serverweb = Flask(__name__)
+@serverweb.route("/")
+def hello():
+    return "DomoControlSM"
+# Create the server web and run it in a background daemon thread.
+server_thread = threading.Thread(target=serverweb.run)
+server_thread.daemon = True
+server_thread.start()
 
 # Declare screens classes
 class MainScreen(Screen):
