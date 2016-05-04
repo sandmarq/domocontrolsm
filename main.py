@@ -5,16 +5,20 @@
 """
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.logger import Logger
 
 import kivyviews
 import threading
 from flask import Flask
 
-# TODO Socket server
+# Logging initialization
+# TODO Add logging
 
-# TODO Data handler
+# TODO Socket server for receiving data from wifi IoT devices
 
-# review check this code
+# TODO Data handler PyOWM and order data work flow
+
+# review check this code for the web site
 # Server Flask
 serverweb = Flask(__name__)
 
@@ -22,9 +26,26 @@ serverweb = Flask(__name__)
 @serverweb.route("/")
 def hello():
     return "DomoControlSM"
+"""
+@serverweb.route("/weather")
+def hello1():
+    return "Weather"
+
+@serverweb.route("/alarms")
+def hello2():
+    return "Alarms"
+
+@serverweb.route("/radio")
+def hello3():
+    return "Radio"
+
+@serverweb.route("/automation")
+def hello4():
+    return "Automation"
+"""
 
 # Create the server web and run it in a background daemon thread.
-server_thread = threading.Thread(target=serverweb.run, kwargs=dict(host='0.0.0.0'))
+server_thread = threading.Thread(target=serverweb.run, kwargs=dict(host='0.0.0.0', debug=True))
 server_thread.daemon = True
 server_thread.start()
 
