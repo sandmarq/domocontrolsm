@@ -26,26 +26,30 @@ serverweb = Flask(__name__)
 @serverweb.route("/")
 def hello():
     return "DomoControlSM"
-"""
+
+
 @serverweb.route("/weather")
 def hello1():
     return "Weather"
+
 
 @serverweb.route("/alarms")
 def hello2():
     return "Alarms"
 
+
 @serverweb.route("/radio")
 def hello3():
     return "Radio"
 
+
 @serverweb.route("/automation")
 def hello4():
     return "Automation"
-"""
+
 
 # Create the server web and run it in a background daemon thread.
-server_thread = threading.Thread(target=serverweb.run, kwargs=dict(host='0.0.0.0', debug=True))
+server_thread = threading.Thread(target=serverweb.run, kwargs=dict(host='0.0.0.0'))
 server_thread.daemon = True
 server_thread.start()
 
