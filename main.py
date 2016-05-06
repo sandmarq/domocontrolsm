@@ -6,13 +6,22 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.logger import Logger
+from kivy.config import Config
+
 
 import kivyviews
 import threading
 from flask import Flask
 
 # Logging initialization
+Logger.info('Application: This is a test')
+
 # TODO Add logging
+# CRITICAL = 50
+# ERROR = 40
+# WARNING = 30
+# INFO = 20
+# DEBUG = 10
 
 # TODO Socket server for receiving data from wifi IoT devices
 
@@ -138,13 +147,21 @@ sm.add_widget(configurationscreen)
 
 
 class DomocontrolsmApp(App):
+    use_kivy_settings = False
     """
     Initialization of the app
     """
-    icon = 'img/10d.png'
-    title = 'DomoControlSM'
+    def build_config(self, config):
+        config.setdefaults('kivy', {
+            'log_dir': './',
+            'log_enable': 1,
+            'log_level': 'debug',
+            'log_name': 'domocontrolsm'
+        })
 
     def build(self):
+        self.icon = 'img/10d.png'
+        self.title = 'DomoControlSM'
         return sm
 
 
